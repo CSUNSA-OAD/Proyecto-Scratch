@@ -15,6 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMdiArea>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
@@ -26,6 +27,9 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
+    QMdiArea *mdiArea;
+    QMdiArea *mdiArea_2;
+    QMdiArea *mdiArea_3;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -34,13 +38,26 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(711, 419);
+        MainWindow->resize(878, 419);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        mdiArea = new QMdiArea(centralWidget);
+        mdiArea->setObjectName(QStringLiteral("mdiArea"));
+        mdiArea->setGeometry(QRect(0, 0, 311, 681));
+        QBrush brush(QColor(255, 255, 255, 255));
+        brush.setStyle(Qt::SolidPattern);
+        mdiArea->setBackground(brush);
+        mdiArea_2 = new QMdiArea(centralWidget);
+        mdiArea_2->setObjectName(QStringLiteral("mdiArea_2"));
+        mdiArea_2->setGeometry(QRect(280, 0, 281, 411));
+        mdiArea_3 = new QMdiArea(centralWidget);
+        mdiArea_3->setObjectName(QStringLiteral("mdiArea_3"));
+        mdiArea_3->setGeometry(QRect(560, 0, 321, 371));
+        mdiArea_3->setBackground(brush);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 711, 21));
+        menuBar->setGeometry(QRect(0, 0, 878, 21));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
