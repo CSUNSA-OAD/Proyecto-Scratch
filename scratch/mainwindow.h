@@ -6,6 +6,7 @@
 #include <QPixmap>
 #include <QPainter>
 #include <QPicture>
+#include <QMatrix>
 
 
 namespace Ui {
@@ -22,6 +23,12 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
+
+    //void on_lineEdit_cursorPositionChanged(int arg1, int arg2);
+
+    //void on_lineEdit_editingFinished();
 
 private:
     QPixmap * myPix;

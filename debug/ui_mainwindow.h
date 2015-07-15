@@ -15,7 +15,6 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -31,7 +30,7 @@ public:
     QWidget *centralWidget;
     QPushButton *pushButton;
     QLabel *mylabel;
-    QLineEdit *lineEdit;
+    QPushButton *pushButton_2;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -40,20 +39,20 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(878, 419);
+        MainWindow->resize(878, 489);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(310, 30, 93, 28));
+        pushButton->setGeometry(QRect(360, 90, 93, 28));
         mylabel = new QLabel(centralWidget);
         mylabel->setObjectName(QStringLiteral("mylabel"));
-        mylabel->setGeometry(QRect(20, 10, 271, 351));
+        mylabel->setGeometry(QRect(10, 40, 311, 381));
         mylabel->setAutoFillBackground(true);
         mylabel->setFrameShape(QFrame::WinPanel);
-        lineEdit = new QLineEdit(centralWidget);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        lineEdit->setGeometry(QRect(310, 60, 113, 22));
+        pushButton_2 = new QPushButton(centralWidget);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        pushButton_2->setGeometry(QRect(360, 130, 93, 28));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -76,6 +75,7 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
         pushButton->setText(QApplication::translate("MainWindow", "PushButton", 0));
         mylabel->setText(QString());
+        pushButton_2->setText(QApplication::translate("MainWindow", "PushButton", 0));
     } // retranslateUi
 
 };

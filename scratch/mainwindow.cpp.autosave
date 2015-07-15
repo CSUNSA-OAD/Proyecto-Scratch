@@ -43,6 +43,9 @@ void MainWindow::on_pushButton_2_clicked()
    QImage myImage("imagenes/gato.png");
    myPainter->drawImage(100,150,myImage);
    myPainter->rotate(-0.2);
+   //robot_transform.rotate(angle);
+   *robot2 = myImage.transformed() //(robot_transform,Qt::SmoothTransformation);
+   *robot2 =  robot2->scaled(12,12, Qt::KeepAspectRatio,Qt::SmoothTransformation);
    myPainter->end();
    ui->mylabel->setPixmap(*myPix);
 }
