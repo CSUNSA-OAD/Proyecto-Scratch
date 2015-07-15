@@ -37,14 +37,21 @@ void MainWindow::on_pushButton_clicked()
 }
 
 void MainWindow::on_pushButton_2_clicked()
-{
-   myPix->fill();
-   myPainter = new QPainter(myPix);
-   QImage myImage("imagenes/gato.png");
-   myPainter->drawImage(100,150,myImage);
-   myPainter->rotate(-0.2);
-   myPainter->end();
-   ui->mylabel->setPixmap(*myPix);
+{/*
+   QPixmap pix(*ui->mylabel->pixmap());
+   QMatrix rm;
+   rm.rotate(90);
+   pix = pix.transformed(rm);
+   ui->mylabel->setPixmap(pix);*/
+
+    myPix->fill();
+    myPainter = new QPainter(myPix);//pizaaraa
+    QImage myImage("imagenes/gato.png");
+    myPainter->translate(150,-60);
+    myPainter->rotate(45);
+    myPainter->drawImage(50,150,myImage);
+    myPainter->end();
+    ui->mylabel->setPixmap(*myPix);
 }
 
 
